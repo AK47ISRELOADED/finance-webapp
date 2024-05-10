@@ -1,0 +1,381 @@
+/* .card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 20vh;
+    width: 40vh;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: gilroy;
+} */
+
+/* -------------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+#main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  font-family: calibri;
+
+  /* background: linear-gradient(90deg,rgba(0, 0, 0, 0.526),white,rgba(0, 0, 0, 0.539)); */
+  background-color: #14213d;
+  display: flex;
+  /* grid-template-columns: auto 1fr; */
+  padding-top: 50px;
+  color: #fca311;
+}
+
+h1 {
+  text-transform: capitalize;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fca311;
+  font-size: 3vw;
+  /* background-color: linear-gradient(90deg,rgba(0, 0, 0, 0.969),white,rgba(0, 0, 0, 0.96)); */
+  /* -webkit-text-stroke: 1px  #ffea00; */
+
+  font-family: calibri;
+  text-align: center;
+  padding: 10px;
+  /* margin: 5px; */
+}
+
+#entry {
+  width: 32vw;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  /* background-color: blue; */
+}
+
+#income {
+  width: 30vw;
+  height: fit-content;
+  /* background-color: antiquewhite; */
+  border: 4px double black;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+
+  /* justify-content: space-around; */
+  gap: 20px;
+}
+#income h2 {
+  text-transform: capitalize;
+
+  font-size: 2vw;
+  color: #fca311;
+
+  font-family: calibri;
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+
+#income input {
+  border-radius: 20px;
+  padding: 5px 20px;
+  /* outline: none; */
+  border: none;
+  /* border: 3px solid  #ffd500; */
+}
+
+#income input::placeholder {
+  /* color: aqua; */
+  text-align: center;
+}
+
+#income button {
+  background-color: #fca311;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+#expense {
+  width: 30vw;
+  height: fit-content;
+  /* background-color: antiquewhite; */
+  border: 4px double black;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+
+  /* justify-content: space-around; */
+  gap: 20px;
+}
+#expense h2 {
+  text-transform: capitalize;
+
+  font-size: 2vw;
+  color: #fca311;
+
+  font-family: calibri;
+  text-align: center;
+  padding: 10px;
+}
+
+#expense input {
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: none;
+  /* outline: none; */
+  /* border: 3px solid  #ffd500; */
+}
+#expense input:nth-child(5) {
+  /* background-color: #fca311; */
+  width: 80%;
+}
+
+#expense input::placeholder {
+  /* color: aqua; */
+  text-align: center;
+}
+
+#expense button {
+  background-color: #fca311;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+#info {
+  position: relative;
+  width: 67vw;
+  height: 85vh;
+  /* height: fit-content; */
+  /* gap: 50px; */
+  /* border: 4px double #000; */
+  /* padding: 20px; */
+  margin-top: 20px;
+  /* padding-top: 50px; */
+  /* background-color: #ffd500; */
+  /* display: flex; */
+  align-items: flex-start;
+  border-radius: 20px;
+
+  justify-content: space-between;
+}
+
+#info2 {
+  position: relative;
+  width: 67vw;
+  height: 65vh;
+  /* height: fit-content; */
+  /* gap: 50px; */
+  /* border: 4px double #000; */
+  /* padding: 20px; */
+  margin-top: 20px;
+  /* padding-top: 50px; */
+  /* background-color: #ffd500; */
+  display: flex;
+  align-items: flex-start;
+  border-radius: 20px;
+
+  justify-content: space-between;
+}
+
+#overview {
+  background-color: #fca311;
+  height: 20%;
+  padding: 10px;
+  margin-left: 23vw;
+  width: 32%;
+  border-radius: 20px;
+  border: 4px double #000;
+  color: #14213d;
+}
+#overview h2 {
+  text-align: center;
+}
+#income-info h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#expense-info h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#income-info {
+  /* background-color: #ffd500; */
+  height: 100%;
+  /* padding: 20px; */
+  padding-left: 30px;
+  width: 33vw;
+  border-radius: 20px;
+  border: 4px double #000;
+}
+#expense-info {
+  /* background-color: #ffd500; */
+  height: 100%;
+  width: 33vw;
+  border-radius: 20px;
+  /* padding: 20px; */
+  padding-left: 30px;
+
+  border: 4px double #000;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#search-bar {
+  /* background-color: #fca311; */
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  width: 80%;
+  padding: 5px 10px;
+  align-items: center;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+#delete-butt {
+  /* scale: 0.7; */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+#delete-butt i {
+  /* scale: 0.7; */
+  /* background-color: transparent; */
+  color: #fca311;
+  font-size: 20px;
+}
+
+@media (max-width: 730px) {
+  #main {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    padding-top: 90px;
+  }
+
+  h1 {
+    font-size: 25px;
+    top: 3%;
+  }
+  #entry h2 {
+    font-size: 18px;
+    /* top: 6%;  */
+  }
+
+  #entry {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #income {
+    width: 80vw;
+  }
+  #expense {
+    width: 80vw;
+  }
+
+  #info {
+    position: relative;
+    width: 90vw;
+    /* height: 85vh; */
+    height: fit-content;
+    /* gap: 50px; */
+    border: 4px double #000;
+    padding: 20px;
+    margin-top: 20px;
+    /* padding-top: 50px; */
+    /* background-color: #ffd500; */
+    /* display: flex; */
+    align-items: flex-start;
+    border-radius: 20px;
+
+    justify-content: space-between;
+  }
+
+  #info2 {
+    position: relative;
+    width: 80vw;
+    height: 65vh;
+    /* height: fit-content; */
+    /* gap: 50px; */
+    /* border: 4px double #000; */
+    /* padding: 20px; */
+    margin-top: 20px;
+    /* padding-top: 50px; */
+    /* background-color: #ffd500; */
+    display: flex;
+    align-items: flex-start;
+    border-radius: 20px;
+
+    justify-content: space-between;
+  }
+
+  #overview {
+    background-color: #ffd500;
+    height: 20%;
+    padding: 10px;
+    margin: auto;
+    width: 52%;
+    border-radius: 20px;
+    border: 4px double #000;
+  }
+
+  #info2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  #income-info {
+    /* background-color: #ffd500; */
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    border: 4px double #000;
+    padding-left: 20px;
+  }
+  #expense-info {
+    /* background-color: #ffd500; */
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 30px;
+    border: 4px double #000;
+  }
+}
